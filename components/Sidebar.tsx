@@ -85,6 +85,51 @@ const Sidebar = () => {
           <Link href="/help/creditCards-list" className={styles.link}>
             Credit Cards - List
           </Link>
+          </li>
+          <li className={styles.menuItem}>
+          <Link href="/help/socialMediaAccounts-add" className={styles.link}>
+          Social Media Accounts - Add
+          </Link>
+        </li>
+          <li className={styles.menuItem}>
+          <Link href="/help/socialMediaAccounts-list" className={styles.link}>
+            Social Media Accounts - List
+          </Link>
+        </li>
+        <li className={styles.menuItem}>
+          <Link href="/help/emailAccounts-add" className={styles.link}>
+          Email Accounts - Add
+          </Link>
+        </li>
+          <li className={styles.menuItem}>
+          <Link href="/help/emailAccounts-list" className={styles.link}>
+            Email Accounts - List
+          </Link>
+        </li>
+        <li className={styles.menuItem}>
+          <Link href="/help/myDomains-add" className={styles.link}>
+          My Domains - Add
+          </Link>
+        </li>
+          <li className={styles.menuItem}>
+          <Link href="/help/myDomains-list" className={styles.link}>
+            My Domains - List
+          </Link>
+        </li>
+        <li className={styles.menuItem}>
+          <Link href="/help/cloudAccounts-add" className={styles.link}>
+          Cloud Accounts - Add
+          </Link>
+        </li>
+          <li className={styles.menuItem}>
+          <Link href="/help/cloudAccounts-list" className={styles.link}>
+            Cloud Accounts - List
+          </Link>
+        </li>
+        <li className={styles.menuItem}>
+          <Link href="/help/setup" className={styles.link}>
+            Setup
+          </Link>
         </li>
       </ul>
     </div>
