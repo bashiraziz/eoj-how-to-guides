@@ -17,6 +17,15 @@
 .heading {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  color: #333;
+}
+
+/* Heading H2*/
+.heading2 {
+  font-size: 19px;
+  font-weight: 600;
   margin-bottom: 15px;
   padding-left: 15px;
   color: #333;
@@ -37,7 +46,7 @@
 }
 
 .sectionHeader {
-  font-weight: bold;
+  font-weight: 550;
   font-size: 16px;
   margin-bottom: 5px;
   display: flex;
@@ -62,7 +71,7 @@
 
 /* Updated: Active link styling */
 .activeLink {
-  color: blue;
+  color: green;
   font-weight: bold;
   text-decoration: underline;
 }

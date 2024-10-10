@@ -44,16 +44,19 @@ const Sidebar = () => {
 
   return (
     <div className={styles.sidebar}>
-      <h3 className={styles.heading}>
+      <h2 className={styles.heading}>
       <a 
       href="https://www.planEOJ.com" // Replace with the desired URL
       target="_blank" 
       rel="noopener noreferrer" // Security best practice to prevent tab nabbing
       className={styles.link} // Optional, you can add styles for the link
     >  
-        Plan EOJ User Guides 
+        End of Journey 
       </a>
-      </h3>
+      </h2>
+      <h4 className={styles.heading2}>
+        User Guides
+      </h4>
       <ul className={styles.menu}>
 
         {/* Contacts Section */}
