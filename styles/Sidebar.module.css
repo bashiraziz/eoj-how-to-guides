@@ -1,43 +1,74 @@
-/* styles/Sidebar.module.css */
 .sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    height: 100vh;
-    padding: 20px;
-    color: #ecf0f1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-  }
-  
-  .heading {
-    color: #ecf0f1;
-    font-size: 18px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .menu {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .menuItem {
-    margin-bottom: 15px;
-  }
-  
-  .link {
-    color: #ecf0f1;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-  }
-  
-  .link:hover {
-    background-color: #34495e; /* Hover effect background color */
-  }
-  
+  background-color: #2e3b4e;
+  padding: 1rem;
+  color: white;
+  height: 100vh; /* Set full height for the sidebar */
+  width: 250px;
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds the sidebar height */
+  position: fixed; /* Ensure the sidebar is fixed on the left side */
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.expandCollapseContainer {
+  display: flex;
+  gap: 1rem; /* Space between the buttons */
+  margin-bottom: 1.5rem; /* Space between buttons and the first section */
+}
+
+.expandCollapse {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.expandCollapse:hover {
+  background-color: #e0e0e0;
+}
+
+.menu {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menuItem {
+  margin-bottom: 1rem; /* Space between sections */
+  cursor: pointer;
+}
+
+.menuItem div {
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.submenu {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+.content {
+  margin-left: 270px; /* Adjust the margin so the content is displayed next to the sidebar */
+  padding: 20px;
+}
+

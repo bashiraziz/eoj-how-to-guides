@@ -1,7 +1,7 @@
-'use client'
+'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from '../styles/Sidebar.module.css'; // Assuming you have a CSS module for styling
+import styles from '../styles/Sidebar.module.css';
 
 // Define a type for the section keys
 type SectionKey = 
@@ -33,9 +33,54 @@ const Sidebar = () => {
     }));
   };
 
+  // Expand all sections
+  const expandAll = () => {
+    setOpenSections({
+      contacts: true,
+      banking: true,
+      investments: true,
+      insurances: true,
+      otherAssets: true,
+      debts: true,
+      creditCards: true,
+      socialMedia: true,
+      emailAccounts: true,
+      myDomains: true,
+      cloudAccounts: true,
+    });
+  };
+
+  // Collapse all sections
+  const collapseAll = () => {
+    setOpenSections({
+      contacts: false,
+      banking: false,
+      investments: false,
+      insurances: false,
+      otherAssets: false,
+      debts: false,
+      creditCards: false,
+      socialMedia: false,
+      emailAccounts: false,
+      myDomains: false,
+      cloudAccounts: false,
+    });
+  };
+
   return (
     <div className={styles.sidebar}>
       <h3 className={styles.heading}>Help</h3>
+
+      {/* Expand/Collapse All */}
+      <div className={styles.expandCollapseContainer}>
+        <button className={styles.expandCollapse} onClick={expandAll}>
+          Expand All
+        </button>
+        <button className={styles.expandCollapse} onClick={collapseAll}>
+          Collapse All
+        </button>
+      </div>
+
       <ul className={styles.menu}>
         {/* Contacts Section */}
         <li className={styles.menuItem}>
@@ -63,6 +108,7 @@ const Sidebar = () => {
           )}
         </li>
 
+        {/* Continue similarly for other sections */}
         {/* Investments Section */}
         <li className={styles.menuItem}>
           <div className={styles.sectionHeader} onClick={() => toggleSection('investments')}>
