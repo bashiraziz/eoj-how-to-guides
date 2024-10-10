@@ -42,23 +42,74 @@ const Sidebar = () => {
     }));
   };
 
+  // Expand all sections
+  const expandAll = () => {
+    setOpenSections({
+      contacts: true,
+      banking: true,
+      investments: true,
+      insurances: true,
+      otherAssets: true,
+      debts: true,
+      creditCards: true,
+      socialMedia: true,
+      emailAccounts: true,
+      myDomains: true,
+      cloudAccounts: true,
+    });
+  };
+
+  // Collapse all sections
+  const collapseAll = () => {
+    setOpenSections({
+      contacts: false,
+      banking: false,
+      investments: false,
+      insurances: false,
+      otherAssets: false,
+      debts: false,
+      creditCards: false,
+      socialMedia: false,
+      emailAccounts: false,
+      myDomains: false,
+      cloudAccounts: false,
+    });
+  };
+
   return (
     <div className={styles.sidebar}>
       <h2 className={styles.heading}>
-      <a 
-      href="https://www.planEOJ.com" // Replace with the desired URL
-      target="_blank" 
-      rel="noopener noreferrer" // Security best practice to prevent tab nabbing
-      className={styles.link} // Optional, you can add styles for the link
-    >  
-        End of Journey 
-      </a>
+        <a 
+          href="https://www.planEOJ.com" // Replace with the desired URL
+          target="_blank" 
+          rel="noopener noreferrer" // Security best practice to prevent tab nabbing
+          className={styles.link} // Optional, you can add styles for the link
+        >  
+          End of Journey 
+        </a>
       </h2>
       <h4 className={styles.heading2}>
-        User Guides
+      <a 
+          href="https://eoj-help-docs-app.vercel.app/" // Replace with the desired URL
+          target="_blank" 
+          rel="noopener noreferrer" // Security best practice to prevent tab nabbing
+          className={styles.link} // Optional, you can add styles for the link
+        >  
+          User Guides
+        </a>
       </h4>
-      <ul className={styles.menu}>
+      
+      {/* Expand/Collapse All */}
+      <div className={styles.expandCollapseContainer}>
+        <button className={styles.expandCollapseButton} onClick={expandAll}>
+          Expand All
+        </button>
+        <button className={styles.expandCollapseButton} onClick={collapseAll}>
+          Collapse All
+        </button>
+      </div>
 
+      <ul className={styles.menu}>
         {/* Contacts Section */}
         <li className={styles.menuItem}>
           <div className={styles.sectionHeader} onClick={() => toggleSection('contacts')}>
@@ -100,7 +151,6 @@ const Sidebar = () => {
             </ul>
           )}
         </li>
-
         {/* Insurances Section */}
         <li className={styles.menuItem}>
           <div className={styles.sectionHeader} onClick={() => toggleSection('insurances')}>
