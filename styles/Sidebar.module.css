@@ -1,75 +1,107 @@
-
+/* Sidebar container */
 .sidebar {
-  background-color: #2e3b4e;
-  padding: 1rem;
-  color: white;
-  height: 100vh; /* Set full height for the sidebar */
+  background-color: #F5F6F7; /* Light gray background */
+  color: #333; /* Dark gray text */
   width: 250px;
-  overflow-y: auto; /* Add vertical scrollbar when content exceeds the sidebar height */
-  position: fixed; /* Ensure the sidebar is fixed on the left side */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Allow scrolling */
+  padding-top: 20px;
+  border-right: 1px solid #ddd; /* Subtle border on the right */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for slight depth */
 }
 
+/* Heading */
 .heading {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-}
-
-.expandCollapseContainer {
-  display: flex;
-  gap: 1rem; /* Space between the buttons */
-  margin-bottom: 1.5rem; /* Space between buttons and the first section */
-}
-
-.expandCollapse {
-  background-color: #f0f0f0;
-  padding: 0.5rem 1rem;
-  border: none;
-  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-left: 15px;
   color: #333;
-  font-weight: bold;
-  border-radius: 5px;
 }
 
-.expandCollapse:hover {
-  background-color: #e0e0e0;
-}
-
+/* Menu items */
 .menu {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .menuItem {
-  margin-bottom: 1rem; /* Space between sections */
+  padding: 10px 15px;
   cursor: pointer;
+  font-size: 14px;
+  color: #333; /* Dark gray text */
 }
 
-.menuItem div {
+.sectionHeader {
   font-weight: bold;
-  color: white;
-  font-size: 1.1rem;
+  font-size: 16px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  color: #333; /* Dark gray */
+}
+
+.submenu {
+  padding-left: 20px;
 }
 
 .link {
+  color: #333; /* Dark gray text */
   text-decoration: none;
-  color: white;
 }
 
 .link:hover {
   text-decoration: underline;
+  color: blue;
 }
 
-.submenu {
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-  color: #ccc;
+/* Updated: Active link styling */
+.activeLink {
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-.content {
-  margin-left: 270px; /* Adjust the margin so the content is displayed next to the sidebar */
-  padding: 20px;
+/* Expand/Collapse buttons */
+.expandCollapseContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 15px;
 }
 
+.expandCollapseButton {
+  background-color: #FFFFFF;
+  color: #007BFF;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.expandCollapseButton:hover {
+  background-color: #EEE;
+}
+
+/* Adjust the spacing for each section */
+.menuItem + .menuItem {
+  margin-top: 5px;
+}
+
+.submenu li {
+  margin-bottom: 5px;
+}
+
+/* Body content styling */
+.bodyContent code {
+  background-color: #F1F3F4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  color: #D32F2F; /* Code text color */
+}

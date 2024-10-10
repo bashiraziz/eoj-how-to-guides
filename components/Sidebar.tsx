@@ -1,15 +1,24 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from '../styles/Sidebar.module.css';
+import { usePathname } from 'next/navigation'; // Use usePathname instead of useRouter
+import styles from '../styles/Sidebar.module.css'; // Assuming you have a CSS module for styling
 
 // Define a type for the section keys
-type SectionKey = 
-  'contacts' | 'banking' | 'investments' | 'insurances' | 'otherAssets' | 
-  'debts' | 'creditCards' | 'socialMedia' | 'emailAccounts' | 'myDomains' | 
+type SectionKey =
+  'contacts' | 'banking' | 'investments' | 'insurances' | 'otherAssets' |
+  'debts' | 'creditCards' | 'socialMedia' | 'emailAccounts' | 'myDomains' |
   'cloudAccounts';
 
 const Sidebar = () => {
+  // Using usePathname from next/navigation which works without hydration issues
+  const pathname = usePathname();
+
+  // Function to determine if a link is active
+  const isActive = (href: string) => {
+    return pathname === href;
+  };
+
   // Define the state for toggling sections
   const [openSections, setOpenSections] = useState<{ [key in SectionKey]: boolean }>({
     contacts: false,
@@ -33,55 +42,11 @@ const Sidebar = () => {
     }));
   };
 
-  // Expand all sections
-  const expandAll = () => {
-    setOpenSections({
-      contacts: true,
-      banking: true,
-      investments: true,
-      insurances: true,
-      otherAssets: true,
-      debts: true,
-      creditCards: true,
-      socialMedia: true,
-      emailAccounts: true,
-      myDomains: true,
-      cloudAccounts: true,
-    });
-  };
-
-  // Collapse all sections
-  const collapseAll = () => {
-    setOpenSections({
-      contacts: false,
-      banking: false,
-      investments: false,
-      insurances: false,
-      otherAssets: false,
-      debts: false,
-      creditCards: false,
-      socialMedia: false,
-      emailAccounts: false,
-      myDomains: false,
-      cloudAccounts: false,
-    });
-  };
-
   return (
     <div className={styles.sidebar}>
-      <h3 className={styles.heading}>Help</h3>
-
-      {/* Expand/Collapse All */}
-      <div className={styles.expandCollapseContainer}>
-        <button className={styles.expandCollapse} onClick={expandAll}>
-          Expand All
-        </button>
-        <button className={styles.expandCollapse} onClick={collapseAll}>
-          Collapse All
-        </button>
-      </div>
-
+      <h3 className={styles.heading}>Plan EOJ User Guides</h3>
       <ul className={styles.menu}>
+
         {/* Contacts Section */}
         <li className={styles.menuItem}>
           <div className={styles.sectionHeader} onClick={() => toggleSection('contacts')}>
@@ -89,8 +54,16 @@ const Sidebar = () => {
           </div>
           {openSections.contacts && (
             <ul className={styles.submenu}>
-              <li><Link href="/help/contacts-add" className={styles.link}>Contacts - Add</Link></li>
-              <li><Link href="/help/contacts-list" className={styles.link}>Contacts - List</Link></li>
+              <li>
+                <Link href="/help/contacts-add" className={isActive('/help/contacts-add') ? styles.activeLink : styles.link}>
+                  Contacts - Add
+                </Link>
+              </li>
+              <li>
+                <Link href="/help/contacts-list" className={isActive('/help/contacts-list') ? styles.activeLink : styles.link}>
+                  Contacts - List
+                </Link>
+              </li>
             </ul>
           )}
         </li>
@@ -102,22 +75,16 @@ const Sidebar = () => {
           </div>
           {openSections.banking && (
             <ul className={styles.submenu}>
-              <li><Link href="/help/banking-add" className={styles.link}>Banking - Add</Link></li>
-              <li><Link href="/help/banking-list" className={styles.link}>Banking - List</Link></li>
-            </ul>
-          )}
-        </li>
-
-        {/* Continue similarly for other sections */}
-        {/* Investments Section */}
-        <li className={styles.menuItem}>
-          <div className={styles.sectionHeader} onClick={() => toggleSection('investments')}>
-            Investments {openSections.investments ? '-' : '+'}
-          </div>
-          {openSections.investments && (
-            <ul className={styles.submenu}>
-              <li><Link href="/help/investments-add" className={styles.link}>Investments - Add</Link></li>
-              <li><Link href="/help/investments-list" className={styles.link}>Investments - List</Link></li>
+              <li>
+                <Link href="/help/banking-add" className={isActive('/help/banking-add') ? styles.activeLink : styles.link}>
+                  Banking - Add
+                </Link>
+              </li>
+              <li>
+                <Link href="/help/banking-list" className={isActive('/help/banking-list') ? styles.activeLink : styles.link}>
+                  Banking - List
+                </Link>
+              </li>
             </ul>
           )}
         </li>
