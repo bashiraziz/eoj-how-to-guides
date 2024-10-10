@@ -2,13 +2,13 @@
 title: "Help Documentation: Banking List Page"
 --- -->
 
-#### **How to Use the Banking List Page**
+**How to Use the Banking List Page**
 
 This page allows you to view, manage, and organize your baniking information efficiently. Below is a detailed guide on how to use its features.
 <br></br>
 <br></br>
 
-### **Navigation to Banking List**:
+**Navigation to Banking List**:
     From the **Financial** section on the left-hand menu, click on **Banking**, then select **List** to view all saved banking records.
 <br></br>
 <br></br>

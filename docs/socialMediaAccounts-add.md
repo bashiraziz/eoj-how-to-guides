@@ -1,4 +1,4 @@
-How to Add a Social Media Account
+**How to Add a Social Media Account**
 =============================
 This guide will help you add a new social media account using the **Add Social Media Account** form.
 <br></br>
