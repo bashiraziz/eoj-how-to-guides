@@ -4,8 +4,8 @@ import Sidebar from '../components/Sidebar';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Data Manager',
-  description: 'Manage Data',
+  title: 'PlanEOJ User Guides',
+  description: 'Plan EOJ user guides',
 };
 
 interface RootLayoutProps {
