@@ -90,7 +90,7 @@ const Sidebar = () => {
       </h2>
       <h4 className={styles.heading2}>
       <a 
-          href="https://eoj-help-docs-app.vercel.app/" // Replace with the desired URL
+          href="https://eoj-how-to-guides-app.vercel.app/" // Replace with the desired URL
           target="_blank" 
           rel="noopener noreferrer" // Security best practice to prevent tab nabbing
           className={styles.link} // Optional, you can add styles for the link
