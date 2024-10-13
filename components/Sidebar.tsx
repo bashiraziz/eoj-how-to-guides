@@ -95,7 +95,7 @@ const Sidebar = () => {
           rel="noopener noreferrer" // Security best practice to prevent tab nabbing
           className={styles.link} // Optional, you can add styles for the link
         >  
-          User Guides
+          How-to Guides
         </a>
       </h4>
       
