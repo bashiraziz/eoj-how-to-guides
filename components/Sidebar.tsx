@@ -88,7 +88,7 @@ const Sidebar = () => {
           End of Journey 
         </a>
       </h2>
-      <h3 className={styles.heading3}>
+      <h3 className={styles.heading2}>
       <a 
           href="https://eoj-how-to-guides-app.vercel.app/" // Replace with the desired URL
           target="_blank" 
