@@ -85,7 +85,7 @@
 
 .expandCollapseButton {
   background-color: #FFFFFF;
-  color: #007BFF;
+  /* color: #007BFF; */
   border: 1px solid #ddd;
   padding: 6px 10px;
   cursor: pointer;
