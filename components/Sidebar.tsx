@@ -88,7 +88,7 @@ const Sidebar = () => {
           End of Journey 
         </a>
       </h2>
-      <h4 className={styles.heading2}>
+      <h3 className={styles.heading3}>
       <a 
           href="https://eoj-how-to-guides-app.vercel.app/" // Replace with the desired URL
           target="_blank" 
@@ -97,7 +97,7 @@ const Sidebar = () => {
         >  
           How-to Guides
         </a>
-      </h4>
+      </h3>
       
       {/* Expand/Collapse All */}
       <div className={styles.expandCollapseContainer}>
