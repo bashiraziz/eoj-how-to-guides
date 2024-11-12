@@ -18,13 +18,13 @@ This guide will help you add a new insurance policy using the **Add Insurance** 
 - **Insurance Company**: Enter the name of the insurance company (required).
 - **Policy Number**: Provide the policy number for the insurance (required).
 - **Insured**: Enter the name of the person who is insured (required).
-- **Coverage Amount**: Add the amount of coverage provided by the insurance (required).
 - **Beneficiary**: Enter the name of the beneficiary who will receive the payout (required).
 - **Phone**: Provide the contact number for the insurance provider (required).
 <br></br>
 <br></br>
 
 ### **Optional Fields**:
+- **Coverage Amount**: Add the amount of coverage provided by the insurance.
 - **URL**: Add a URL link to the insurance provider's website.
 - **Representative Name**: Include the name of the representative managing the policy, if applicable.
 - **Notes**: Use the rich text editor to add any additional information or notes regarding the insurance policy.
