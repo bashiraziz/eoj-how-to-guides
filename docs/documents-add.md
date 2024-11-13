@@ -2,7 +2,8 @@
 title: "Help Documentation: Documents Add Form"
 --- -->
 
-#### **How to Add Documents**
+#### **How to Add Documents** - ***Paid subscription is required to access Documents menu***
+
 
 This guide will help you add new documents using the form.
 <br></br>

@@ -2,8 +2,7 @@
 title: "Help Documentation: Documents List"
 --- -->
 
-**How to Use the Documents List Page**
-======================================
+#### **How to Use the Documents List Page** - ***Paid subscription is required to access Documents menu***
 This page allows you to view and manage all documents saved in your system.
 <br></br>
 <br></br>
