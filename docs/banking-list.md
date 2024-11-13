@@ -60,3 +60,9 @@ The list will display all banking records with the following columns:
 - To edit a banking record, click on the **Edit** icon next to the respective record.
 - To view more details about an investment, click on the **View** icon, which is the **arrow icon** pointing to the right in the Actions column.
 
+<br></br>
+<br></br>
+
+   ## **Additional Information**
+- The sidebar on the left provides navigation options for other sections, including **Management** and **Financial** categories, which contain sub-sections for different types of records.
+- The top navigation bar includes a branding logo and the user profile icon for accessing account settings.

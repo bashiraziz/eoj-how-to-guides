@@ -11,6 +11,7 @@ import Logo from './Logo';
 type SectionKey =
   | 'contacts'
   | 'banking'
+  | 'documents'
   | 'investments'
   | 'insurances'
   | 'otherAssets'
@@ -36,6 +37,7 @@ const Sidebar = () => {
   }>({
     contacts: false,
     banking: false,
+    documents: false,
     investments: false,
     insurances: false,
     otherAssets: false,
@@ -60,6 +62,7 @@ const Sidebar = () => {
     setOpenSections({
       contacts: true,
       banking: true,
+      documents: true,
       investments: true,
       insurances: true,
       otherAssets: true,
@@ -77,6 +80,7 @@ const Sidebar = () => {
     setOpenSections({
       contacts: false,
       banking: false,
+      documents: false,
       investments: false,
       insurances: false,
       otherAssets: false,
@@ -155,6 +159,44 @@ const Sidebar = () => {
                   }
                 >
                   Contacts - List
+                </Link>
+              </li>
+            </ul>
+          )}
+        </li>
+
+        {/* Documenst Section */}
+        <li className={styles.menuItem}>
+          <div
+            className={styles.sectionHeader}
+            onClick={() => toggleSection('documents')}
+          >
+            Documents {openSections.documents ? '-' : '+'}
+          </div>
+          {openSections.documents && (
+            <ul className={styles.submenu}>
+              <li>
+                <Link
+                  href="/help/documents-add"
+                  className={
+                    isActive('/help/documents-add')
+                      ? styles.activeLink
+                      : styles.link
+                  }
+                >
+                  Documents - Add
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/help/documents-list"
+                  className={
+                    isActive('/help/documents-list')
+                      ? styles.activeLink
+                      : styles.link
+                  }
+                >
+                  Documents - List
                 </Link>
               </li>
             </ul>

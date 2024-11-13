@@ -51,6 +51,12 @@ The list will display all the investment accounts with the following columns:
 - To add a new investment, click the **+ Add** button located in the upper-right corner of the page.
 - To edit an investment record, click on the **Edit** icon next to the respective record.
 - To view more details about an investment, click on the **View** icon.
+<<br></br>
+<br></br>
+
+   ## **Additional Information**
+- The sidebar on the left provides navigation options for other sections, including **Management** and **Financial** categories, which contain sub-sections for different types of records.
+- The top navigation bar includes a branding logo and the user profile icon for accessing account settings.
 <br></br>
 <br></br>
 

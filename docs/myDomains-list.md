@@ -53,5 +53,11 @@ Click **Export** at the top of the list to download the current domain records.
 <br></br>
 <br></br>
 
+   ## **Additional Information**
+- The sidebar on the left provides navigation options for other sections, including **Management** and **Financial** categories, which contain sub-sections for different types of records.
+- The top navigation bar includes a branding logo and the user profile icon for accessing account settings.
+<br></br>
+<br></br>
+
 ---
 These instructions should help you efficiently manage your domains information.
